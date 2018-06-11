@@ -1,0 +1,11 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+.git
+.idea
+.vagrant
+.DS_Store
+.ssh
+id_rsa
+vendor
+opt/*
+!opt/.gitkeep
+
