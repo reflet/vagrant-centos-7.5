@@ -6,8 +6,8 @@ Vagrant.configure("2") do |config|
   config.vm.box_version = "1.0.0"
   config.vm.hostname = "centos75"
   config.vm.network "private_network", ip: "192.168.33.10"
-  #config.vm.synced_folder "./opt/", "/home/docker/opt/", create:true, :nfs => true
-  config.vm.synced_folder "./opt/", "/home/docker/opt/", create:true
+  #config.vm.synced_folder "./opt/", "/home/vagrant/opt/", create:true, :nfs => true
+  config.vm.synced_folder "./opt/", "/home/vagrant/opt/", create:true
   config.vm.synced_folder '.', '/vagrant', disabled: true
   config.vm.provision :shell, :path => "provision.sh"
 
