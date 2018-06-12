@@ -16,8 +16,14 @@ Vagrant.configure("2") do |config|
     config.vbguest.auto_update = false
   end
 
-  # メモリ設定
-  config.vm.provider "virtualbox" do |vm|
-    vm.memory = 1024
+  # auto update off.
+  if Vagrant.has_plugin?("vagrant-vbguest") then
+    config.vbguest.auto_update = false
   end
+    
+  # メモリ割り当て変更 (各自の環境に合わせて変更ください)
+  config.vm.provider :virtualbox do |vm|
+    vm.customize ["modifyvm", :id, "--memory", "1024", "--cpus", "1", "--ioapic", "on"]
+  end
+
 end
