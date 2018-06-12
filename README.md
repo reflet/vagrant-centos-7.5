@@ -8,6 +8,19 @@
 * [VirtualBox](https://www.virtualbox.org)
 * [Vagrant](https://www.vagrantup.com)
 
+### ユーザーについて ###
+下記の２ユーザーが初期で登録されています。
+
+```
+・管理者ユーザー
+ User: root
+ Password: vagrant
+
+・デフォルトユーザー (パスワードなしのsudo権限あり)
+ User: vagrant
+ Password: vagrant
+```
+
 ---
 ### 利用方法について ###
 
